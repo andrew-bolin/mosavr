@@ -5,4 +5,23 @@ D Quad 2 to 1 line Multiplexer
 K TTL MUX MUX2
 $ENDCMP
 #
+$CMP EP91H0
+D HDMI 1.4 Audio Return Channel Transceiver
+$ENDCMP
+#
+$CMP HDMI_conn
+D HDMI Receptacle
+K Connector
+$ENDCMP
+#
+$CMP pcie_1x_conn
+D PCI express 1x Connector
+K Edge PCIe
+$ENDCMP
+#
+$CMP pcie_1x_edge
+D PCI express 1x edge connector/socket
+K PCIe PCI-e connector
+$ENDCMP
+#
 #End Doc Library

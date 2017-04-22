@@ -1,4 +1,4 @@
-update=Sat 01 Apr 2017 19:28:34 AEDT
+update=Tue 11 Apr 2017 21:21:38 AEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,5 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=pcie
-LibName31=osmavr
+LibName30=osmavr

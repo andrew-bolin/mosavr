@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name headers)(type KiCad)(uri /home/ab/Documents/AVR/kicad/lib/headers.pretty)(options "")(descr ""))
+  (lib (name pcie)(type KiCad)(uri /home/ab/Documents/AVR/kicad/lib/pcie.pretty)(options "")(descr ""))
+)
