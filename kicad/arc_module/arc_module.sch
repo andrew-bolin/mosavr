@@ -470,7 +470,9 @@ Wire Wire Line
 Wire Wire Line
 	8100 2200 8100 2300
 Wire Wire Line
-	8100 2600 8100 2700
+	8100 2600 8100 2650
+Wire Wire Line
+	8100 2650 8100 2700
 Wire Wire Line
 	8100 3000 8100 3100
 Wire Wire Line
@@ -485,7 +487,9 @@ Wire Wire Line
 Wire Wire Line
 	7250 3100 7000 3100
 Wire Wire Line
-	7250 2500 7250 3200
+	7250 2500 7250 3100
+Wire Wire Line
+	7250 3100 7250 3200
 Wire Wire Line
 	4850 3000 4750 3000
 Wire Wire Line
@@ -499,7 +503,9 @@ Wire Wire Line
 Wire Wire Line
 	4700 1750 4700 1800
 Wire Wire Line
-	4600 1800 4800 1800
+	4600 1800 4700 1800
+Wire Wire Line
+	4700 1800 4800 1800
 Wire Wire Line
 	4800 1800 4800 1900
 Wire Wire Line
@@ -514,7 +520,9 @@ Wire Wire Line
 Wire Wire Line
 	4250 1750 4250 1800
 Wire Wire Line
-	4150 1800 4350 1800
+	4150 1800 4250 1800
+Wire Wire Line
+	4250 1800 4350 1800
 Wire Wire Line
 	4350 1800 4350 1900
 Wire Wire Line
@@ -523,9 +531,17 @@ Connection ~ 4250 1800
 Wire Wire Line
 	4250 1300 4250 1450
 Wire Wire Line
-	2800 2700 3800 2700
+	2800 2700 3050 2700
 Wire Wire Line
-	6550 1700 7500 1700
+	3050 2700 3800 2700
+Wire Wire Line
+	6550 1700 6950 1700
+Wire Wire Line
+	6950 1700 7200 1700
+Wire Wire Line
+	7200 1700 7350 1700
+Wire Wire Line
+	7350 1700 7500 1700
 Wire Wire Line
 	7500 1700 7500 1800
 Wire Wire Line
@@ -543,7 +559,11 @@ Connection ~ 7250 3100
 Wire Wire Line
 	7500 2100 7500 2000
 Wire Wire Line
-	6950 2100 7500 2100
+	6950 2100 7200 2100
+Wire Wire Line
+	7200 2100 7350 2100
+Wire Wire Line
+	7350 2100 7500 2100
 Wire Wire Line
 	7350 2100 7350 2150
 Wire Wire Line
@@ -559,13 +579,21 @@ Wire Wire Line
 Wire Wire Line
 	9200 4850 9500 4850
 Wire Wire Line
-	1600 1100 2450 1100
+	1600 1100 2250 1100
+Wire Wire Line
+	2250 1100 2450 1100
 Wire Wire Line
 	2450 1100 2450 1250
 Wire Wire Line
 	1600 1400 2250 1400
 Wire Wire Line
-	2250 1100 2250 2600
+	2250 1100 2250 1400
+Wire Wire Line
+	2250 1400 2250 1700
+Wire Wire Line
+	2250 1700 2250 2000
+Wire Wire Line
+	2250 2000 2250 2600
 Connection ~ 2250 1100
 Wire Wire Line
 	1600 1700 2250 1700
@@ -607,15 +635,23 @@ Wire Wire Line
 Wire Wire Line
 	4850 2500 4600 2500
 Wire Wire Line
-	4000 2700 4850 2700
+	4000 2700 4350 2700
 Wire Wire Line
-	3700 2800 4850 2800
+	4350 2700 4850 2700
+Wire Wire Line
+	3700 2800 4150 2800
+Wire Wire Line
+	4150 2800 4850 2800
 Connection ~ 4350 2700
 Connection ~ 4150 2800
 Wire Wire Line
 	2800 2300 2800 2700
 Wire Wire Line
-	1600 2800 3500 2800
+	1600 2800 1750 2800
+Wire Wire Line
+	1750 2800 3200 2800
+Wire Wire Line
+	3200 2800 3500 2800
 $Comp
 L R R10
 U 1 1 58F262D9
@@ -746,8 +782,6 @@ Text Label 1400 4150 2    60   ~ 0
 HEAC-
 Text Notes 2100 3400 2    60   ~ 0
 For HDMI breakout, pins 13-19
-Text Notes 6200 3950 2    60   ~ 0
-Check packages for:\nInductors\nBig Caps\nCS8416\nEP91H0
 Text Notes 6900 4200 0    60   ~ 0
 Change CS8416 jumpers to SMD solder bridges?
 $Comp
@@ -796,7 +830,11 @@ SPD_Tx
 Text Label 6400 3200 0    60   ~ 0
 SPD_Rx
 Wire Wire Line
-	6550 1350 6550 2400
+	6550 1350 6550 1600
+Wire Wire Line
+	6550 1600 6550 1700
+Wire Wire Line
+	6550 1700 6550 2400
 Wire Wire Line
 	6550 2400 6350 2400
 Connection ~ 6550 1700
@@ -1002,6 +1040,63 @@ $EndComp
 Wire Wire Line
 	10500 5100 10750 5100
 Wire Wire Line
-	10750 4900 10750 5400
+	10750 4900 10750 5100
+Wire Wire Line
+	10750 5100 10750 5400
 Connection ~ 10750 5100
+$Comp
+L CONN_01X02 P10
+U 1 1 58FC9BF1
+P 10000 1300
+F 0 "P10" H 10000 1450 50  0000 C CNN
+F 1 "CONN_01X02" V 10100 1300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 10000 1300 50  0001 C CNN
+F 3 "" H 10000 1300 50  0000 C CNN
+	1    10000 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR023
+U 1 1 58FCA199
+P 9700 1150
+F 0 "#PWR023" H 9700 1000 50  0001 C CNN
+F 1 "+3V3" H 9700 1290 50  0000 C CNN
+F 2 "" H 9700 1150 50  0000 C CNN
+F 3 "" H 9700 1150 50  0000 C CNN
+	1    9700 1150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 1150 9700 1250
+Wire Wire Line
+	9700 1250 9800 1250
+$Comp
+L GND #PWR024
+U 1 1 58FCA4C0
+P 9700 1450
+F 0 "#PWR024" H 9700 1200 50  0001 C CNN
+F 1 "GND" H 9700 1300 50  0000 C CNN
+F 2 "" H 9700 1450 50  0000 C CNN
+F 3 "" H 9700 1450 50  0000 C CNN
+	1    9700 1450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 1350 9700 1350
+Wire Wire Line
+	9700 1350 9700 1450
+$Comp
+L CONN_01X01 P9
+U 1 1 58FCACA6
+P 6200 1600
+F 0 "P9" H 6200 1700 50  0000 C CNN
+F 1 "CONN_01X01" V 6300 1600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 6200 1600 50  0001 C CNN
+F 3 "" H 6200 1600 50  0000 C CNN
+	1    6200 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6400 1600 6550 1600
+Connection ~ 6550 1600
 $EndSCHEMATC
